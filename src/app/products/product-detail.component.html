@@ -1,6 +1,15 @@
 <div class='card' *ngIf="product">
   <div class='card-header'>
     {{pageTitle + ': ' + product.productName}}
+
+    <ul>
+      <li>
+        {{typeName.get(type.Text)}}
+      </li>
+      <li>
+        {{typeName.get(type.Number)}}
+      </li>
+    </ul>
   </div>
   <div class='card-footer'>
     <button class='btn btn-outline-secondary'
