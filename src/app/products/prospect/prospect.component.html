@@ -1,0 +1,32 @@
+<!--<p>prospect works!</p>-->
+
+<div class="eaw-layout">
+  <div class="field-wrapper layout-section-main">
+    <div class="field-header">
+      <div></div>
+      <button class="add-button add-field" (click)="onClick()">Add Field</button>
+    </div>
+
+    <div class="container">
+<!--      <div class="prospect-field-list-header">-->
+        <div class="prospect-field-label">Field Label</div>
+        <div class="prospect-field-type">Type</div>
+        <div class="prospect-field-checkbox">Active</div>
+<!--      </div>-->
+
+      <div class="field-container">
+        <div class="individual-field prospect-field-list-header">
+          <div class="field-name" >   field.name  </div>
+          <div class="field-type"> field.fieldType </div>
+          <input type="checkbox" class="field-active"/>
+        </div>
+
+        <div class="field-number" *ngFor="let n of numSequence(8); let i = index;">
+          <div class="number-{{i+1}}">{{ i+1 }}</div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
