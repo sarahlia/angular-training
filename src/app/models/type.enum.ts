@@ -1,9 +1,9 @@
 export enum Type {
-  Text = 1,
-  Number
+  Text = 3,
+  Number = 7
 }
 
 export const TypeName = new Map<number, string>([
-  [1, 'Text'],
-  [2, 'Number']
+  [3, 'Text'],
+  [7, 'Number']
 ]);
