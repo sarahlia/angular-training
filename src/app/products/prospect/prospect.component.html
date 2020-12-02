@@ -16,16 +16,36 @@
 
       <div class="field-container">
         <div class="individual-field prospect-field-list-header">
-          <div class="field-name" >   field.name  </div>
-          <div class="field-type"> field.fieldType </div>
+          <div class="field-sort">3</div>
+          <div class="field-name">   field.name 3  </div>
+          <div class="field-type"> field.fieldType 3 </div>
           <input type="checkbox" class="field-active"/>
         </div>
 
-        <div class="field-number" *ngFor="let n of numSequence(8); let i = index;">
-          <div class="number-{{i+1}}">{{ i+1 }}</div>
+        <div class="individual-field prospect-field-list-header">
+          <div class="field-sort">1</div>
+          <div class="field-name">   field.name 1 </div>
+          <div class="field-type"> field.fieldType 1 </div>
+          <input type="checkbox" class="field-active"/>
+        </div>
+
+        <div class="individual-field prospect-field-list-header">
+          <div class="field-sort">2</div>
+          <div class="field-name">   field.name 2  </div>
+          <div class="field-type"> field.fieldType 2 </div>
+          <input type="checkbox" class="field-active"/>
+        </div>
+
+        <div>----------</div>
+        <div class="individual-field prospect-field-list-header">
+          <div class="field-sort" id="result" ></div>
+          <div class="field-name">  </div>
+          <div class="field-type">  </div>
+          <input type="checkbox" class="field-active"/>
         </div>
 
       </div>
+
     </div>
 
   </div>
