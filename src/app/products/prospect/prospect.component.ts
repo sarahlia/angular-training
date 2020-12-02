@@ -22,23 +22,19 @@ export class ProspectComponent implements OnInit {
   }
 
   mySortFunction(): void {
-    let elems = document.getElementsByClassName('field-sort');
+    let list = document.getElementById('fieldOrder');
 
-    // convert NodeList to array
-    let elemsArr = Array.from(elems);
-
-    // perform sort
-    elemsArr.sort((a, b) => {
-      return Number(a.innerHTML) - Number(b.innerHTML);
+    let nodesToSort = list.querySelectorAll('.individual-field');
+    Array.prototype.map.call(nodesToSort, (node) => {
+      return {
+        node: node,
+        relevantText: node.querySelector('.field-sort').textContent
+      };
+    }).sort((a, b) => {
+      console.log(a, b);
+      return a.relevantText.localeCompare(b.relevantText);
+    }).forEach((item) => {
+      list.appendChild(item.node);
     });
-
-    // join the array back into HTML
-    let output = '';
-    for (let i = 0; i < elemsArr.length; i++) {
-      output += elemsArr[i].outerHTML;
-    }
-
-    // append output to div 'result'
-    document.getElementById('result').innerHTML = output;
   }
 }
